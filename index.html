@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fibranusa — Banana Bio-Leather Corporate Gifts</title>
+  <meta name="description" content="Premium sustainable corporate gift sets crafted from banana sheath bio-leather. Zero animal products, zero waste.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="main-nav">
+  <button class="logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <div class="logo-icon">F</div>
+    <span class="logo-name">Fibranusa</span>
+  </button>
+  <div class="nav-links">
+    <button class="nav-link" onclick="document.getElementById('story-sec').scrollIntoView({behavior:'smooth'})">Our Story</button>
+    <button class="nav-link" onclick="document.getElementById('products-sec').scrollIntoView({behavior:'smooth'})">Products</button>
+    <button class="nav-link" onclick="document.getElementById('sustain-sec').scrollIntoView({behavior:'smooth'})">Sustainability</button>
+    <button class="nav-link" onclick="document.getElementById('contact-sec').scrollIntoView({behavior:'smooth'})">Contact</button>
+    <button class="cart-btn" id="cart-btn" onclick="openCart()">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2C1A0E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <path d="M16 10a4 4 0 01-8 0"/>
+      </svg>
+      <div class="cart-badge" id="cart-badge">0</div>
+    </button>
+    <button class="shop-btn nav-link" onclick="document.getElementById('products-sec').scrollIntoView({behavior:'smooth'})">Shop Now</button>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-blob"></div>
+  <div class="hero-inner">
+    <div class="pill">🌿 100% Banana Bio-Leather</div>
+    <h1>Gifts that<br><em>Honor the Earth</em></h1>
+    <p>Premium corporate gift sets crafted from banana sheath bio-leather. Zero animals harmed. Zero compromise on quality.</p>
+    <div class="hero-btns">
+      <button class="btn-dark" onclick="document.getElementById('products-sec').scrollIntoView({behavior:'smooth'})">Browse Gift Sets</button>
+      <button class="btn-out" onclick="document.getElementById('story-sec').scrollIntoView({behavior:'smooth'})">Our Story</button>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-n" data-count="85" data-suffix="%">85%</div>
+        <div class="stat-l">Less water used</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n" style="font-size:28px;">Zero</div>
+        <div class="stat-l">Harmful chemicals</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n" data-count="2" data-suffix="M+">2M+</div>
+        <div class="stat-l">Sheaths saved</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n" data-count="100" data-suffix="%">100%</div>
+        <div class="stat-l">Biodegradable</div>
+      </div>
+    </div>
+  </div>
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>BANANA BIO-LEATHER</span>
+      <span>ZERO WASTE</span>
+      <span>SUSTAINABLE GIFTING</span>
+      <span>CARBON CONSCIOUS</span>
+      <span>HANDCRAFTED IN INDONESIA</span>
+      <span>ANIMAL FREE</span>
+      <span>BANANA BIO-LEATHER</span>
+      <span>ZERO WASTE</span>
+      <span>SUSTAINABLE GIFTING</span>
+      <span>CARBON CONSCIOUS</span>
+      <span>HANDCRAFTED IN INDONESIA</span>
+      <span>ANIMAL FREE</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── STORY ── -->
+<section class="story" id="story-sec">
+  <div class="story-grid">
+    <div class="story-img-wrap">
+      <div class="story-placeholder">
+        <div class="leaf">🍌</div>
+        <p>Banana Sheath Bio-Leather</p>
+      </div>
+      <div class="eco-cert">
+        <div class="title">Eco-Certified</div>
+        <div class="sub">Sustainable Materials</div>
+      </div>
+      <div class="pct-badge">
+        <div class="num">85%</div>
+        <div class="sub">Less water</div>
+      </div>
+    </div>
+    <div>
+      <div class="sec-label">Our Story</div>
+      <h2 class="sec-title">From Waste<br>to <em>Wonder</em></h2>
+      <div class="divider"></div>
+      <p class="body-text">Fibranusa was born from a simple observation: billions of banana sheaths are discarded each year, while the fashion industry struggles to find sustainable alternatives to animal leather.</p>
+      <p class="body-text">Our patented process transforms these agricultural byproducts into a luxurious, durable material — without harming animals or the planet.</p>
+      <div class="sc-grid">
+        <div class="sc"><div class="n">85%</div><div class="l">Less water</div></div>
+        <div class="sc"><div class="n">Zero</div><div class="l">Harmful chemicals</div></div>
+        <div class="sc"><div class="n">100%</div><div class="l">Biodegradable</div></div>
+        <div class="sc"><div class="n">2M+</div><div class="l">Sheaths saved</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRODUCTS ── -->
+<section class="products" id="products-sec">
+  <div class="products-header">
+    <div class="sec-label">Corporate Gift Sets</div>
+    <h2 class="sec-title">Gifts that <em>Tell a Story</em></h2>
+    <p>From affordable starter sets to luxury executive bundles — all crafted from banana bio-leather.</p>
+    <div id="wishlist-count" class="wishlist-count">❤️ <span id="wish-num">0</span> item(s) in wishlist</div>
+  </div>
+  <div class="prod-grid" id="prod-grid"></div>
+</section>
+
+<!-- ── SUSTAINABILITY ── -->
+<section class="sustain" id="sustain-sec">
+  <div class="sustain-hdr">
+    <div class="sec-label">Sustainability</div>
+    <h2 class="sec-title">Our Commitment<br>to <em>the Earth</em></h2>
+    <p>Every decision we make is filtered through one question: is this good for people and planet?</p>
+  </div>
+
+  <div class="s-grid">
+    <div class="s-cell">
+      <div class="s-num">85%</div>
+      <div class="s-lbl">Less water</div>
+      <div class="s-desc">Our process conserves 85% of the water used in traditional leather tanning — saving millions of litres annually.</div>
+    </div>
+    <div class="s-cell">
+      <div class="s-num">Zero</div>
+      <div class="s-lbl">Harmful chemicals</div>
+      <div class="s-desc">No chromium, no formaldehyde. Every step uses food-safe, plant-based processes — safe for makers and wearers.</div>
+    </div>
+    <div class="s-cell">
+      <div class="s-num">2M+</div>
+      <div class="s-lbl">Sheaths saved</div>
+      <div class="s-desc">Banana sheaths that would have been burned or buried are now transformed into premium bio-leather materials.</div>
+    </div>
+    <div class="s-cell">
+      <div class="s-num">100%</div>
+      <div class="s-lbl">Biodegradable</div>
+      <div class="s-desc">At end of life, every Fibranusa product returns cleanly to the earth — no microplastics, no toxic residue.</div>
+    </div>
+    <div class="s-cell">
+      <div class="s-num">5kg</div>
+      <div class="s-lbl">CO₂ saved/unit</div>
+      <div class="s-desc">Each product produced saves approximately 5kg of CO₂ compared to conventional leather manufacturing.</div>
+    </div>
+  </div>
+  <div class="s-grid" style="margin-bottom:0;">
+    <div class="s-cell">
+      <div class="s-num">200+</div>
+      <div class="s-lbl">Farmers supported</div>
+      <div class="s-desc">We partner with over 200 banana farmers across Central Java, providing fair income from agricultural waste.</div>
+    </div>
+    <div class="s-cell">
+      <div class="s-num">12T</div>
+      <div class="s-lbl">Waste repurposed/mo</div>
+      <div class="s-desc">12 tonnes of banana sheath waste are collected and repurposed into premium materials every month.</div>
+    </div>
+    <div class="s-cell">
+      <div class="s-num">5 yrs</div>
+      <div class="s-lbl">R&amp;D invested</div>
+      <div class="s-desc">Five years of dedicated research went into perfecting our patented bio-leather process.</div>
+    </div>
+    <div class="s-cell">
+      <div class="s-num">15+</div>
+      <div class="s-lbl">Certifications</div>
+      <div class="s-desc">Fibranusa holds over 15 environmental and ethical certifications across material sourcing and production.</div>
+    </div>
+    <div class="s-cell">
+      <div class="s-num">B2B</div>
+      <div class="s-lbl">Corporate focused</div>
+      <div class="s-desc">Purpose-built for corporate gifting — minimum orders, branded packaging, and bulk customisation available.</div>
+    </div>
+  </div>
+
+  <div class="s-feats">
+    <div class="s-feat">
+      <div class="s-feat-icon">🌱</div>
+      <div class="s-feat-title">Agricultural Roots</div>
+      <div class="s-feat-desc">We source directly from banana plantations in Central Java, turning a waste product into a premium material — and creating fair incomes for farming families.</div>
+    </div>
+    <div class="s-feat">
+      <div class="s-feat-icon">🔬</div>
+      <div class="s-feat-title">Patented Process</div>
+      <div class="s-feat-desc">Our proprietary bio-leather process took 5 years to develop. The result: a material with the look and feel of fine leather — without a single animal byproduct.</div>
+    </div>
+    <div class="s-feat">
+      <div class="s-feat-icon">♻️</div>
+      <div class="s-feat-title">Circular by Design</div>
+      <div class="s-feat-desc">From farm waste to finished gift — and back to the earth. Every component is designed to biodegrade cleanly at end of life, leaving no toxic trace.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section class="contact" id="contact-sec">
+  <div style="text-align:center;margin-bottom:48px;">
+    <div class="sec-label">Get in Touch</div>
+    <h2 class="sec-title">Ready to <em>Gift Sustainably?</em></h2>
+  </div>
+  <div class="contact-grid">
+    <div>
+      <div class="contact-detail">
+        <div class="contact-lbl">Email</div>
+        <div class="contact-val">hello@fibranusa.com</div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-lbl">WhatsApp</div>
+        <div class="contact-val">+62 812 3456 7890</div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-lbl">Location</div>
+        <div class="contact-val">Central Java, Indonesia</div>
+      </div>
+      <div class="contact-detail" style="border:none;margin:0;padding:0;">
+        <div class="contact-lbl">Minimum Order</div>
+        <div class="contact-val">5–10 units per set</div>
+      </div>
+    </div>
+    <div>
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <div class="form-row">
+          <div>
+            <label class="form-label">First Name</label>
+            <input class="ifield" type="text" placeholder="Jane" required>
+          </div>
+          <div>
+            <label class="form-label">Last Name</label>
+            <input class="ifield" type="text" placeholder="Doe" required>
+          </div>
+        </div>
+        <label class="form-label">Company</label>
+        <input class="ifield" type="text" placeholder="Acme Corp">
+        <label class="form-label">Email</label>
+        <input class="ifield" type="email" placeholder="jane@acme.com" required>
+        <label class="form-label">Message</label>
+        <textarea class="ifield" rows="4" placeholder="Tell us about your gifting needs — quantity, timeline, customisation..."></textarea>
+        <button class="btn-send" type="submit">Send Enquiry →</button>
+      </form>
+      <div id="contact-thanks" class="contact-thanks">
+        <div class="big">🌿</div>
+        <h3>Thank you!</h3>
+        <p>We'll be in touch within 1–2 business days with a quote tailored to your needs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">
+        <div class="icon">F</div>
+        <span>Fibranusa</span>
+      </div>
+      <p class="footer-desc">Premium sustainable corporate gifts crafted from banana sheath bio-leather. Zero compromise. Zero waste.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Products</div>
+      <a href="#products-sec" onclick="document.getElementById('products-sec').scrollIntoView({behavior:'smooth'});return false;">Leather Set A</a>
+      <a href="#products-sec" onclick="document.getElementById('products-sec').scrollIntoView({behavior:'smooth'});return false;">Leather Set B</a>
+      <a href="#products-sec" onclick="document.getElementById('products-sec').scrollIntoView({behavior:'smooth'});return false;">Leather Set C</a>
+      <a href="#products-sec" onclick="document.getElementById('products-sec').scrollIntoView({behavior:'smooth'});return false;">Tenun &amp; Leather</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Company</div>
+      <a href="#story-sec" onclick="document.getElementById('story-sec').scrollIntoView({behavior:'smooth'});return false;">Our Story</a>
+      <a href="#sustain-sec" onclick="document.getElementById('sustain-sec').scrollIntoView({behavior:'smooth'});return false;">Sustainability</a>
+      <a href="#contact-sec" onclick="document.getElementById('contact-sec').scrollIntoView({behavior:'smooth'});return false;">Contact</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Legal</div>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Shipping Policy</a>
+    </div>
+  </div>
+  <div class="footer-copy">© 2024 Fibranusa. All rights reserved. Handcrafted in Central Java, Indonesia.</div>
+</footer>
+
+<!-- ── PRODUCT MODAL ── -->
+<div class="overlay" id="modal-overlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <button class="modal-wish" id="modal-wish-top" onclick="toggleWishModal()">🤍</button>
+    <div class="modal-grid">
+      <div class="modal-img-wrap">
+        <div class="modal-img-placeholder" id="modal-img-placeholder" style="width:100%;min-height:340px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;">
+          <span id="modal-img-icon" style="font-size:80px;"></span>
+          <span style="font-family:sans-serif;font-size:11px;color:rgba(245,237,227,.6);letter-spacing:.1em;text-transform:uppercase;">Banana Bio-Leather</span>
+        </div>
+      </div>
+      <div class="modal-info">
+        <div class="modal-badge" id="modal-badge"></div>
+        <h2 id="modal-name" style="font-size:24px;font-weight:300;margin-bottom:6px;"></h2>
+        <div id="modal-price" style="font-size:28px;font-weight:300;color:#C4895A;margin-bottom:8px;"></div>
+        <div id="modal-short" style="font-family:sans-serif;font-size:11px;color:#5C7A5A;font-weight:600;margin-bottom:16px;"></div>
+        <div style="font-family:sans-serif;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#8B6343;margin-bottom:8px;">Color — <span id="modal-color-name"></span></div>
+        <div class="modal-color-swatches" id="modal-swatches"></div>
+        <div class="info-grid">
+          <div class="info-cell"><div class="l">Min. Order</div><div class="v" id="modal-moq"></div></div>
+          <div class="info-cell"><div class="l">Delivery</div><div class="v" id="modal-delivery"></div></div>
+        </div>
+        <button class="btn-add" onclick="addToCartModal()">Add to Cart 🛒</button>
+        <button class="btn-enq" onclick="enquireNow()">Enquire Now →</button>
+        <button class="btn-wish-modal" id="modal-wish-btn" onclick="toggleWishModal()">🤍 &nbsp;Add to Wishlist</button>
+      </div>
+    </div>
+    <div class="tab-bar">
+      <button class="tab active" onclick="switchTab('features',this)">Features</button>
+      <button class="tab" onclick="switchTab('material',this)">Material</button>
+      <button class="tab" onclick="switchTab('care',this)">Care Instructions</button>
+    </div>
+    <div class="tab-body">
+      <div id="tab-features"></div>
+      <div id="tab-material" style="display:none;"></div>
+      <div id="tab-care" style="display:none;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── CART DRAWER ── -->
+<div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-hdr">
+    <div>
+      <div style="font-size:20px;font-weight:400;">Shopping Cart</div>
+      <div style="font-family:sans-serif;font-size:11px;color:#8B6343;margin-top:2px;" id="cart-count-label">0 items</div>
+    </div>
+    <button style="background:none;border:none;font-size:18px;color:#8B6343;" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-body" id="cart-body"></div>
+  <div class="cart-ftr" id="cart-ftr">
+    <div style="background:rgba(92,122,90,.08);border-radius:4px;padding:9px 13px;margin-bottom:14px;border-left:3px solid #5C7A5A;">
+      <div style="font-family:sans-serif;font-size:11px;color:#5C7A5A;font-weight:500;">🌿 Minimum order quantities apply per product</div>
+    </div>
+    <div class="cart-total">
+      <span style="font-family:sans-serif;font-size:13px;color:#8B6343;">Estimated Total</span>
+      <span id="cart-total" style="font-size:24px;font-weight:300;">$0</span>
+    </div>
+    <button class="btn-checkout" onclick="cartCheckout()">Proceed to Enquiry →</button>
+    <button class="btn-clear" onclick="clearCart()">Clear Cart</button>
+  </div>
+</div>
+
+<!-- ── TOAST ── -->
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
