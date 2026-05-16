@@ -20,8 +20,7 @@ const PRODUCTS = [
     care: "Wipe clean with a dry cloth. Avoid prolonged exposure to direct sunlight. Store in dust bag when not in use. Do not use chemical cleaners.",
     moq: "10 units",
     delivery: "7–14 business days",
-    bgGrad: "linear-gradient(135deg,#D4A574 0%,#C4895A 40%,#8B6343 100%)",
-    icon: "🪪"
+    img: "assets/product-4.jpg"
   },
   {
     id: "lb",
@@ -43,8 +42,7 @@ const PRODUCTS = [
     care: "Keep notebook pages dry. Leather: wipe with soft dry cloth. Avoid folding or compressing the notebook spine.",
     moq: "10 units",
     delivery: "7–14 business days",
-    bgGrad: "linear-gradient(135deg,#7A9A78 0%,#5C7A5A 40%,#3a5038 100%)",
-    icon: "📒"
+    img: "assets/product-3.jpg"
   },
   {
     id: "lc",
@@ -66,8 +64,7 @@ const PRODUCTS = [
     care: "Condition leather every 3–6 months with beeswax balm. Keep away from sharp objects. Wipe spills immediately.",
     moq: "10 units",
     delivery: "10–14 business days",
-    bgGrad: "linear-gradient(135deg,#A06040 0%,#7A4E2D 40%,#4a2e18 100%)",
-    icon: "💼"
+    img: "assets/product-2.jpg"
   },
   {
     id: "lt",
@@ -90,8 +87,7 @@ const PRODUCTS = [
     care: "Spot-clean Tenun panels with damp cloth — do not scrub. Leather: use natural balm twice yearly. Store in dust bag away from humidity.",
     moq: "5 units",
     delivery: "14–21 business days",
-    bgGrad: "linear-gradient(135deg,#C4895A 0%,#8B5E3C 40%,#2C1A0E 100%)",
-    icon: "👜"
+    img: "assets/product-1.jpg"
   }
 ];
 
@@ -113,10 +109,7 @@ function renderCards() {
     div.className = "pcard";
     div.innerHTML = `
       <div class="pcard-img-wrap">
-        <div class="prod-placeholder" id="prod-img-${p.id}" style="background:${p.bgGrad};width:100%;height:100%;">
-          <div style="font-size:48px;">${p.icon}</div>
-          <div style="font-family:sans-serif;font-size:10px;color:rgba(245,237,227,.7);letter-spacing:.1em;text-transform:uppercase;">Banana Bio-Leather</div>
-        </div>
+        <img id="prod-img-${p.id}" src="${p.img}" alt="${p.name}" loading="lazy" />
         <div class="prod-tag" style="background:${p.tagc};">${p.tag}</div>
         <button class="wish-btn" id="wish-card-${p.id}" onclick="toggleWishCard('${p.id}')">🤍</button>
       </div>
@@ -176,10 +169,10 @@ function renderModal() {
   const p = currentProduct;
   const c = COLORS[currentColorIdx];
 
-  const placeholder = document.getElementById("modal-img-placeholder");
-  placeholder.style.background = p.bgGrad;
-  placeholder.style.filter = c.filter;
-  document.getElementById("modal-img-icon").textContent = p.icon;
+  const modalImg = document.getElementById("modal-img-el");
+  modalImg.src = p.img;
+  modalImg.style.filter = c.filter;
+  modalImg.alt = p.name;
 
   document.getElementById("modal-badge").textContent = p.tag;
   document.getElementById("modal-badge").style.background = p.tagc;
@@ -201,8 +194,8 @@ function renderModal() {
     btn.title = col.name;
     btn.onclick = () => {
       currentColorIdx = ci;
-      const ph = document.getElementById("modal-img-placeholder");
-      ph.style.filter = col.filter;
+      const img = document.getElementById("modal-img-el");
+      img.style.filter = col.filter;
       document.getElementById("modal-color-name").textContent = col.name;
       swatchRow.querySelectorAll(".swatch").forEach((s, i) => {
         s.style.outline = i === ci ? "2px solid #C4895A" : "2px solid transparent";
@@ -291,7 +284,7 @@ function addToCartModal() {
   if (existing) {
     existing.qty++;
   } else {
-    cart.push({ id: p.id, name: p.name, price: p.price, bgGrad: p.bgGrad, icon: p.icon, filter: COLORS[currentColorIdx].filter, color, qty: 1 });
+    cart.push({ id: p.id, name: p.name, price: p.price, img: p.img, filter: COLORS[currentColorIdx].filter, color, qty: 1 });
   }
   closeModal();
   updateCartBadge();
@@ -332,8 +325,8 @@ function renderCartDrawer() {
   }
   body.innerHTML = cart.map((item, idx) => `
     <div class="cart-item">
-      <div class="cart-thumb" style="display:flex;align-items:center;justify-content:center;background:${item.bgGrad};filter:${item.filter};">
-        <span style="font-size:28px;">${item.icon}</span>
+      <div class="cart-thumb">
+        <img src="${item.img}" alt="${item.name}" style="filter:${item.filter};" />
       </div>
       <div style="flex:1;min-width:0;">
         <div style="font-family:sans-serif;font-size:13px;font-weight:500;color:#2C1A0E;line-height:1.3;margin-bottom:2px;">${item.name}</div>

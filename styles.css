@@ -123,13 +123,6 @@ nav{
   position:relative;background:#E8D5C0;
 }
 .story-img-wrap img{width:100%;height:100%;object-fit:cover;}
-.story-placeholder{
-  width:100%;height:100%;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:16px;background:linear-gradient(135deg,#C4895A 0%,#8B6343 50%,#2C1A0E 100%);
-}
-.story-placeholder .leaf{font-size:64px;}
-.story-placeholder p{font-family:sans-serif;font-size:13px;color:rgba(245,237,227,.7);letter-spacing:.1em;text-transform:uppercase;}
 .eco-cert{
   position:absolute;bottom:14px;left:14px;
   background:rgba(251,247,242,.95);border-radius:4px;padding:10px 14px;
@@ -161,12 +154,8 @@ nav{
 .prod-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
 .pcard{background:#FBF7F2;border-radius:10px;overflow:hidden;position:relative;}
 .pcard-img-wrap{position:relative;overflow:hidden;height:220px;}
-.pcard-img-wrap img,.pcard-img-wrap .prod-placeholder{
+.pcard-img-wrap img{
   width:100%;height:100%;object-fit:cover;transition:filter .4s ease;
-}
-.prod-placeholder{
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:10px;font-family:sans-serif;
 }
 .prod-tag{
   position:absolute;top:11px;left:11px;
@@ -208,13 +197,8 @@ nav{
   max-height:90vh;overflow-y:auto;position:relative;
 }
 .modal-grid{display:grid;grid-template-columns:1fr 1fr;}
-.modal-img-wrap{height:100%;min-height:340px;overflow:hidden;border-radius:8px 0 0 0;position:relative;background:#E8D5C0;}
+.modal-img-wrap{height:100%;min-height:340px;overflow:hidden;border-radius:8px 0 0 0;position:relative;background:#1a0e08;}
 .modal-img-wrap img{width:100%;height:100%;object-fit:cover;transition:filter .4s;}
-.modal-img-placeholder{
-  width:100%;min-height:340px;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:12px;
-}
 .modal-info{padding:28px 24px 20px;}
 .modal-close{position:absolute;top:12px;right:12px;background:none;border:none;font-size:18px;color:#8B6343;z-index:10;padding:4px;}
 .modal-wish{position:absolute;top:12px;right:44px;background:none;border:none;font-size:18px;z-index:10;padding:4px;}
@@ -386,11 +370,6 @@ footer{background:#2C1A0E;padding:48px 32px 32px;border-top:1px solid rgba(245,2
   display:none;opacity:0;transition:opacity .3s;
 }
 .toast.show{display:block;opacity:1;}
-
-/* ── Product color placeholder tints ── */
-.tint-natural{background:linear-gradient(135deg,#C4895A,#8B6343);}
-.tint-black{background:linear-gradient(135deg,#3a3a38,#1a1a18);}
-.tint-green{background:linear-gradient(135deg,#5C7A5A,#3a5038);}
 
 /* ── Responsive ── */
 @media(max-width:900px){
