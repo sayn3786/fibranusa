@@ -366,8 +366,22 @@ function updateCartBadge() {
 }
 
 function cartCheckout() {
+  if (cart.length === 0) return;
+  const itemLines = cart.map(i =>
+    `• ${i.name} (${i.color}) x${i.qty} — $${i.price * i.qty}`
+  ).join("\n");
+  const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+  const msg = [
+    "Hello Fibranusa! 👋 I'd like to enquire about the following gift sets:",
+    "",
+    itemLines,
+    "",
+    `*Total: $${total}*`,
+    "",
+    "Please send me a quote with delivery details. Thank you!"
+  ].join("\n");
+  window.open(`https://wa.me/6582938821?text=${encodeURIComponent(msg)}`, "_blank", "noopener");
   closeCart();
-  document.getElementById("contact-sec").scrollIntoView({ behavior: "smooth" });
 }
 
 // ── Enquire ──
