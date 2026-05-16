@@ -25,7 +25,6 @@ nav{
   width:44px;height:44px;
   object-fit:contain;
   flex-shrink:0;
-  mix-blend-mode:multiply;
 }
 .nav-social{
   display:flex;align-items:center;justify-content:center;
@@ -405,7 +404,7 @@ nav{
 footer{background:#2C1A0E;padding:48px 32px 32px;border-top:1px solid rgba(245,237,227,.08);}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(245,237,227,.08);}
 .footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
-.footer-logo-img{width:38px;height:38px;object-fit:contain;flex-shrink:0;mix-blend-mode:screen;}
+.footer-logo-img{width:38px;height:38px;object-fit:contain;flex-shrink:0;}
 .footer-brand span{font-size:16px;font-weight:bold;color:#F5EDE3;}
 .footer-socials{display:flex;gap:8px;margin-top:16px;}
 .footer-social{
