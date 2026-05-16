@@ -68,6 +68,7 @@ nav{
   background:rgba(196,137,90,.09);pointer-events:none;
 }
 .hero-inner{max-width:560px;}
+.pill-logo{width:20px;height:20px;object-fit:contain;flex-shrink:0;}
 .pill{
   display:inline-flex;align-items:center;gap:5px;
   background:#E8F0E8;color:#5C7A5A;border-radius:20px;
