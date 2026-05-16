@@ -376,9 +376,27 @@ function enquireNow() {
   document.getElementById("contact-sec").scrollIntoView({ behavior: "smooth" });
 }
 
-// ── Contact form ──
+// ── Contact form → WhatsApp ──
 function submitForm(e) {
   e.preventDefault();
+  const first   = document.getElementById("f-first").value.trim();
+  const last    = document.getElementById("f-last").value.trim();
+  const company = document.getElementById("f-company").value.trim();
+  const email   = document.getElementById("f-email").value.trim();
+  const message = document.getElementById("f-message").value.trim();
+
+  const lines = [
+    "Hello Fibranusa! 👋",
+    "",
+    `*Name:* ${first} ${last}`,
+    company ? `*Company:* ${company}` : null,
+    `*Email:* ${email}`,
+    message ? `\n*Message:*\n${message}` : null,
+  ].filter(Boolean).join("\n");
+
+  const waUrl = `https://wa.me/6582938821?text=${encodeURIComponent(lines)}`;
+  window.open(waUrl, "_blank", "noopener");
+
   document.getElementById("contact-form").style.display = "none";
   document.getElementById("contact-thanks").style.display = "block";
 }
