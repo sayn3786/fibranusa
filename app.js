@@ -25,7 +25,7 @@ const PRODUCTS = [
   {
     id: "lb",
     name: "Premium Leather Set B",
-    price: 25,
+    price: 27,
     tag: "Most Popular",
     tagc: "#5C7A5A",
     short: "Best for onboarding & corporate gifting",
@@ -47,7 +47,7 @@ const PRODUCTS = [
   {
     id: "lc",
     name: "Premium Leather Set C",
-    price: 35,
+    price: 40,
     tag: "Premium",
     tagc: "#7A4E2D",
     short: "Perfect for executive gifts & premium clients",
