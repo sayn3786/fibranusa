@@ -69,7 +69,7 @@ const PRODUCTS = [
   {
     id: "lt",
     name: "Premium Tenun & Leather Set",
-    price: 65,
+    price: 70,
     tag: "VIP",
     tagc: "#8B5E3C",
     short: "Luxury executive & VIP corporate gifting",
