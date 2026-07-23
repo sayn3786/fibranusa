@@ -24,8 +24,8 @@ const PRODUCTS = [
   },
   {
     id: "lb",
-    name: "Premium Leather Set B",
-    price: 27,
+    name: "Work Essential Bundle",
+    price: 37.40,
     tag: "Most Popular",
     tagc: "#5C7A5A",
     short: "Best for onboarding & corporate gifting",
