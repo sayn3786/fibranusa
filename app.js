@@ -67,6 +67,28 @@ const PRODUCTS = [
     img: "assets/product-2.jpg"
   },
   {
+    id: "tb",
+    name: "Travel Bundle",
+    price: 29.53,
+    tag: "New",
+    tagc: "#5C7A5A",
+    short: "Designed for modern travelers",
+    desc: "Passport Holder, Luggage Tag, Premium Hard Box. The perfect sustainable travel companion.",
+    items: ["Passport Holder", "Luggage Tag", "Premium Hard Box"],
+    features: [
+      "Full-grain banana bio-leather passport holder with snap closure",
+      "Fits standard passport with extra card slots inside",
+      "Matching luggage tag with brass buckle and clear ID window",
+      "Arrives in a premium Fibranusa-branded gift box",
+      "Custom logo embossing available (min. 20 units)"
+    ],
+    material: "100% banana sheath bio-leather. Hardware: solid brass buckle and snap. Lining: microfibre. Packaging: rigid Fibranusa-branded gift box.",
+    care: "Wipe clean with a dry cloth. Condition every 3–6 months with natural beeswax balm. Avoid prolonged moisture exposure.",
+    moq: "10 units",
+    delivery: "7–14 business days",
+    img: "assets/product-5-travel.jpg"
+  },
+  {
     id: "lt",
     name: "Premium Tenun & Leather Set",
     price: 70,
