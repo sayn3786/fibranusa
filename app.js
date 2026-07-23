@@ -89,6 +89,31 @@ const PRODUCTS = [
     img: "assets/product-5-travel.jpg"
   },
   {
+    id: "pts",
+    name: "Premium Travel Set",
+    price: 45.21,
+    tag: "New",
+    tagc: "#5C7A5A",
+    short: "The complete traveler's companion — handcrafted in Indonesia",
+    desc: "Passport Holder, Luggage Tag, Strap Holder, Glasses Holder & Premium Gift Box. Made from natural banana fibers.",
+    items: ["Passport Holder", "Luggage Tag", "Strap Holder", "Glasses Holder", "Premium Gift Box"],
+    features: [
+      "Made from natural banana fibers — lightweight & durable",
+      "Passport holder with card slots and snap closure",
+      "Luggage tag with brass buckle and clear ID window",
+      "Strap holder and glasses case in matching bio-leather",
+      "Arrives in a premium Fibranusa-branded gift box",
+      "Handcrafted in Indonesia — eco-friendly & sustainable",
+      "Custom logo embossing available (min. 20 units)",
+      "Available in Natural Brown, Forest Green, and Classic Black"
+    ],
+    material: "100% natural banana sheath bio-leather. Hardware: solid brass. Lining: microfibre. Packaging: premium rigid gift box.",
+    care: "Wipe clean with a dry cloth. Condition every 3–6 months with natural beeswax balm. Avoid prolonged moisture exposure.",
+    moq: "10 units",
+    delivery: "7–14 business days",
+    img: "assets/product-6-travel-premium.jpg"
+  },
+  {
     id: "lt",
     name: "Premium Tenun & Leather Set",
     price: 70,
