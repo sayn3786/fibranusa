@@ -2,8 +2,8 @@
 const PRODUCTS = [
   {
     id: "la",
-    name: "Premium Leather Set A",
-    price: 15,
+    name: "Essentials Duo",
+    price: 17.25,
     tag: "Best Value",
     tagc: "#2C1A0E",
     short: "Affordable premium gifting solution",
