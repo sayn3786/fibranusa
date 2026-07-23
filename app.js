@@ -380,7 +380,7 @@ function cartCheckout() {
     "",
     "Please send me a quote with delivery details. Thank you!"
   ].join("\n");
-  window.open(`https://wa.me/6582938821?text=${encodeURIComponent(msg)}`, "_blank", "noopener");
+  window.open(`https://wa.me/628570762561?text=${encodeURIComponent(msg)}`, "_blank", "noopener");
   closeCart();
 }
 
@@ -408,7 +408,7 @@ function submitForm(e) {
     message ? `\n*Message:*\n${message}` : null,
   ].filter(Boolean).join("\n");
 
-  const waUrl = `https://wa.me/6582938821?text=${encodeURIComponent(lines)}`;
+  const waUrl = `https://wa.me/628570762561?text=${encodeURIComponent(lines)}`;
   window.open(waUrl, "_blank", "noopener");
 
   document.getElementById("contact-form").style.display = "none";
