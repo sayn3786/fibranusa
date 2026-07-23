@@ -46,8 +46,8 @@ const PRODUCTS = [
   },
   {
     id: "lc",
-    name: "Premium Leather Set C",
-    price: 40,
+    name: "Everyday Impact Set",
+    price: 41.85,
     tag: "Premium",
     tagc: "#7A4E2D",
     short: "Perfect for executive gifts & premium clients",
