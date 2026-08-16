@@ -19,6 +19,7 @@
     <button class="nav-link" onclick="document.getElementById('story-sec').scrollIntoView({behavior:'smooth'})">Our Story</button>
     <button class="nav-link" onclick="document.getElementById('products-sec').scrollIntoView({behavior:'smooth'})">Products</button>
     <button class="nav-link" onclick="document.getElementById('process-sec').scrollIntoView({behavior:'smooth'})">Process</button>
+    <button class="nav-link" onclick="document.getElementById('downloads-sec').scrollIntoView({behavior:'smooth'})">Catalogue</button>
     <button class="nav-link" onclick="document.getElementById('sustain-sec').scrollIntoView({behavior:'smooth'})">Sustainability</button>
     <button class="nav-link" onclick="document.getElementById('contact-sec').scrollIntoView({behavior:'smooth'})">Contact</button>
     <button class="cart-btn" id="cart-btn" onclick="openCart()">
@@ -170,6 +171,49 @@
     <div id="wishlist-count" class="wishlist-count">❤️ <span id="wish-num">0</span> item(s) in wishlist</div>
   </div>
   <div class="prod-grid" id="prod-grid"></div>
+</section>
+
+<!-- ── DOWNLOADS ── -->
+<section class="downloads" id="downloads-sec">
+  <div class="downloads-hdr">
+    <div class="sec-label">Catalogues</div>
+    <h2 class="sec-title">Take Fibranusa <em>With You</em></h2>
+    <p>Scan the code with your phone camera, or download directly — our full company profile and product collection, ready to share with your team.</p>
+  </div>
+
+  <div class="dl-grid">
+    <div class="dl-card">
+      <div class="dl-qr-wrap">
+        <img class="dl-qr" src="assets/qr-company-profile.png" alt="QR code linking to the Fibranusa Company Profile PDF" loading="lazy">
+      </div>
+      <div class="dl-body">
+        <div class="dl-kicker">Company Profile</div>
+        <h3 class="dl-title">Who We Are</h3>
+        <p class="dl-desc">Our story, our patented bio-leather process, sustainability commitments and partnership models.</p>
+        <div class="dl-meta">PDF &middot; 93 pages &middot; 9 MB</div>
+        <a class="dl-btn" href="assets/docs/Fibranusa-Company-Profile.pdf" target="_blank" rel="noopener" download>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Profile
+        </a>
+      </div>
+    </div>
+
+    <div class="dl-card">
+      <div class="dl-qr-wrap">
+        <img class="dl-qr" src="assets/qr-collection-brochure.png" alt="QR code linking to the Fibranusa Collection Brochure PDF" loading="lazy">
+      </div>
+      <div class="dl-body">
+        <div class="dl-kicker">Collection Brochure</div>
+        <h3 class="dl-title">The Full Range</h3>
+        <p class="dl-desc">Every gift set in detail — components, colourways, sizing, embossing options and order quantities.</p>
+        <div class="dl-meta">PDF &middot; 165 pages &middot; 16 MB</div>
+        <a class="dl-btn" href="assets/docs/Fibranusa-Collection-Brochure.pdf" target="_blank" rel="noopener" download>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Brochure
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ── SUSTAINABILITY ── -->
